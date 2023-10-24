@@ -1,1 +1,3 @@
-# tpiuo
+- Ime: Leonora
+- Prezime: Đemaili
+- Email: leonora.demaili@fer.hr
