@@ -1,0 +1,11 @@
+Kreiranje topica s 3 particije
+docker exec kafka2-kafka1-1 kafka-topics --bootstrap-server kafka2-kafka1-1:9092 --create --partitions 3 --topic input-topic
+
+Ispis svih topica
+docker exec kafka2-kafka1-1 kafka-topics --bootstrap-server kafka2-kafka1-1:9092 --list
+
+Slanje poruka
+docker exec --interactive --tty kafka2-kafka1-1 kafka-console-producer --bootstrap-server kafka2-kafka1-1:9092 --property parse.key=true --property key.separator=: --topic topicParticion
+
+Čitanje poruka
+docker exec --interactive --tty kafka2-kafka1-1 kafka-console-consumer --bootstrap-server kafka2-kafka1-1:9092 --topic input-topic --from-beginning
